@@ -1,5 +1,3 @@
-'use client';
-
 import { View, Text, StyleSheet } from '@react-pdf/renderer';
 
 interface PropsType {

@@ -1,5 +1,3 @@
-'use client';
-
 import { PDFDownloadLink } from '@react-pdf/renderer';
 import PDFGenerator from './pdf';
 import { Button } from '@/components/ui/button';
