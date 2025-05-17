@@ -1,8 +1,8 @@
 import React from 'react';
 import { View, Image, StyleSheet } from '@react-pdf/renderer';
 
-const cover = `${process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'}/assets/images/avensia-cover-new.jpeg`;
-const samplePF = `${process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'}/assets/images/sample-pf.jpg`;
+const cover = '/assets/images/avensia-cover-new.jpeg';
+const samplePF = '/assets/images/sample-pf.jpg';
 
 const styles = StyleSheet.create({
   profileImageWrapper: {
