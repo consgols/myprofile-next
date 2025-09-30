@@ -4,6 +4,8 @@ import React, { useState, useEffect } from 'react';
 import ClientPdfViewer from '@/components/pdfgenerator/createpdfclient';
 import CVFormPage from './cvform';
 import { CVFormData } from './defaullt_data';
+import { logout } from '@/app/lib/auth';
+import { Button } from '@/components/ui/button';
 
 const CreateCvClient = () => {
   const [cv, setCv] = useState<CvData>(CVFormData);
@@ -48,6 +50,11 @@ const CreateCvClient = () => {
         </div>
         {/* Right side: PDF Preview */}
         <div className="p-6 overflow-y-auto">
+          <form action={logout}>
+            <Button className="mb-5" type="submit">
+              Logout
+            </Button>
+          </form>
           <ClientPdfViewer cvData={cv} />
         </div>
       </div>
