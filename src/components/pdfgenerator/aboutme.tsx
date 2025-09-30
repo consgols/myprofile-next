@@ -1,5 +1,3 @@
-'use client';
-
 import { View, Text } from '@react-pdf/renderer';
 
 interface PropsType {
@@ -7,7 +5,11 @@ interface PropsType {
 }
 
 const About = ({ aboutMe }: PropsType) => {
-  return <View>{!!aboutMe && <Text>{aboutMe}</Text>}</View>;
+  return (
+    <View>
+      <Text>{aboutMe}</Text>
+    </View>
+  );
 };
 
 export default About;

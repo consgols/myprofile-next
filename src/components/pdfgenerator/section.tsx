@@ -13,10 +13,10 @@ const style = StyleSheet.create({
     borderTop: '1px solid #ccc',
   },
   section: {
-    marginTop: 32,
+    marginTop: 20,
   },
   title: {
-    fontSize: 18,
+    fontSize: 15,
     fontWeight: 'bold',
     marginBottom: 12,
   },

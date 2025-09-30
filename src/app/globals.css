@@ -112,8 +112,44 @@
   --sidebar-ring: oklch(0.554 0.135 66.442);
 }
 
+/* ---- Print helpers ---- */
 @media print {
-  @page {
-    size: A4;
+  /* make colors render properly */
+  html,
+  body {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* A4 canvas sizing (content width = page width minus @page margins) */
+  .print-a4 {
+    width: 210mm;
+    min-height: 297mm;
+    margin: 0 auto;
+  }
+
+  /* turn off flex/grid on print to avoid pagination bugs */
+  .print-block {
+    display: block !important;
+  }
+
+  /* control page breaking */
+  .break-before-page {
+    break-before: page;
+    page-break-before: always;
+  }
+  .break-after-page {
+    break-after: page;
+    page-break-after: always;
+  }
+  .avoid-break {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  /* handy for hiding UI */
+  .no-print {
+    display: none !important;
   }
 }
+
