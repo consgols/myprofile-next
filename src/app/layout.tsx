@@ -31,7 +31,7 @@ export default async function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className={`${getNunito.variable} ${getNunitoSans.variable} antialiased font-nunito-sans font-nunito `}>
         <SessionProviderClient session={session}>
-          <ThemeProvider attribute="class" defaultTheme="light" disableTransitionOnChange>
+          <ThemeProvider attribute="class" defaultTheme="light" forcedTheme="light" disableTransitionOnChange>
             <main>
               {session?.user && (
                 <section>
